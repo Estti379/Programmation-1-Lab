@@ -1,7 +1,5 @@
 package lu.uni.lab7.Exercice2.VendingMachine;
 
-import lu.uni.lab7.Exercice2.Product.Product;
-
 public class Button {
 	
 	private Tray[] myTray;
