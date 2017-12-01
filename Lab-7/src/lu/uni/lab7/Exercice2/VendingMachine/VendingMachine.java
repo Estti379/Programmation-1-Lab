@@ -59,15 +59,8 @@ public class VendingMachine {
 		} else if ( emptyButton == null ) {
 			System.out.println("Error - VendingMachine: All buttons are "
 					+ "already programmed. Failed to add the product.");
-		} else if ( emptyTrays == null ) {
-			System.out.println("Error - VendingMachine: There aren't any "
-					+ "consecutive empty trays to accomodate a product of that "
-					+ "size!");
 		} else {
-			emptyButton.addTrayList(emptyTrays);
-			for ( int i = 0 ; i < emptyTrays.length ; i++ ) {
-				emptyTrays[i].setStoredProduct(newProduct);
-			}
+			// TODO finish him
 		}
 		
 		
