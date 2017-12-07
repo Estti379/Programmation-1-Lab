@@ -40,7 +40,7 @@ public class Cart {
 
 	public void addItem(Product product) {
 		storedProduct.add(product);
-		// TODO add sysout
+		System.out.println( product.getBrand() + " was added to the " );
 	}
 
 	// TODO method reset()

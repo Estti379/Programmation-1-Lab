@@ -20,4 +20,8 @@ public abstract class Product {
 	public int getPrice() {
 		return price;
 	}
+	
+	public String getBrand() {
+		return brand;
+	}
 }
