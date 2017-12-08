@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="lu.uni.lab9.Exercice1.MusicPlayer.Playlist" project="Lab-9" 
     file="/Lab-9/src/lu/uni/lab9/Exercice1/MusicPlayer/Playlist.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="679" y="174"/>    
+    <position height="-1" width="-1" x="485" y="252"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <interface id="2" language="java" name="lu.uni.lab9.Exercice1.Sorter.PlaylistSorter" project="Lab-9" 
     file="/Lab-9/src/lu/uni/lab9/Exercice1/Sorter/PlaylistSorter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="133" y="317"/>    
+    <position height="-1" width="-1" x="84" y="295"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </interface>  
   <class id="3" language="java" name="lu.uni.lab9.Exercice1.Sorter.DefaultSorter" project="Lab-9" 
     file="/Lab-9/src/lu/uni/lab9/Exercice1/Sorter/DefaultSorter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="382" y="155"/>    
+    <position height="-1" width="-1" x="267" y="153"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="lu.uni.lab9.Exercice1.Sorter.ShuffleSorter" project="Lab-9" 
     file="/Lab-9/src/lu/uni/lab9/Exercice1/Sorter/ShuffleSorter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="388" y="310"/>    
+    <position height="-1" width="-1" x="278" y="298"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="lu.uni.lab9.Exercice1.Sorter.PlayCountSorter" project="Lab-9" 
     file="/Lab-9/src/lu/uni/lab9/Exercice1/Sorter/PlayCountSorter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="395" y="455"/>    
+    <position height="-1" width="-1" x="280" y="439"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -47,11 +47,11 @@
     </display>  
   </class>  
   <realization id="6">    
-    <end type="SOURCE" refId="5"/>    
+    <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="2"/>  
   </realization>  
   <realization id="7">    
-    <end type="SOURCE" refId="4"/>    
+    <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="2"/>  
   </realization>  
   <realization id="8">    
