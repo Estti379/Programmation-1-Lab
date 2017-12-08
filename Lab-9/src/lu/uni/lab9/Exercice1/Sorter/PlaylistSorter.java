@@ -5,6 +5,6 @@ import java.util.List;
 import lu.uni.lab9.Exercice1.MusicPlayer.Playlist;
 import lu.uni.lab9.Exercice1.MusicPlayer.Song;
 
-public abstract interface PlaylistSorter {
-	abstract public List<Song> sort(Playlist toBeSorted);
+public interface PlaylistSorter {
+	List<Song> sort(Playlist toBeSorted);
 }

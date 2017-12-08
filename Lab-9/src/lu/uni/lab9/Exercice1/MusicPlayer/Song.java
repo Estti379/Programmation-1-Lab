@@ -81,9 +81,9 @@ public class Song implements Comparable<Song>{
 		} else if ( this.getPlayCount() == arg0.getPlayCount() ) {
 			comparison = 0;
 		} else if ( this.getPlayCount() < arg0.getPlayCount()  ) {
-			comparison = -1;
-		} else if ( this.getPlayCount() > arg0.getPlayCount() ) {
 			comparison = 1;
+		} else if ( this.getPlayCount() > arg0.getPlayCount() ) {
+			comparison = -1;
 		}
 		
 		return comparison;

@@ -9,10 +9,10 @@ public class PlayCountSorter implements PlaylistSorter {
 
 	@Override
 	public List<Song> sort(Playlist toBeSorted) {
-		List<Song> notSorted = toBeSorted.getSongs();
-		Collections.sort(notSorted);
+		List<Song> sortedList = toBeSorted.getSongs();
+		Collections.sort(sortedList);
 		
-		return notSorted;
+		return sortedList;
 	}
 
 	

@@ -1,7 +1,7 @@
 package lu.uni.lab9.Exercice1.MusicPlayer;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -64,10 +64,10 @@ public class Playlist {
 	
 	public Playlist trier(PlaylistSorter sorter, String name) {	
 		Playlist newList = new Playlist(name);
-		Set<Song> sortedList = new ArrayList<Song>;
+		Set<Song> sortedList = new HashSet<Song>();
 		sortedList.addAll( sorter.sort(this) );
 		newList.setSongs(sortedList);
-		return newList; 
+		return newList;
 	}
 
 }
