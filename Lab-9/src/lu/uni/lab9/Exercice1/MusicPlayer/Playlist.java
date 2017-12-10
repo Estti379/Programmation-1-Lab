@@ -1,8 +1,6 @@
 package lu.uni.lab9.Exercice1.MusicPlayer;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -65,16 +63,8 @@ public class Playlist {
 	
 	public Playlist trier(PlaylistSorter sorter, String name) {	
 		Playlist newList = new Playlist(name);
-		Set<Song> sortedList = new HashSet<Song>();
+		Set<Song> sortedList = new LinkedHashSet<Song>();
 		sortedList.addAll( sorter.sort(this) );
-		
-		/* TODO Delete me*/
-		
-		Iterator<Song> iterator = sortedList.iterator();
-		while ( iterator.hasNext() ) {
-			System.out.println( iterator.next().toString() );
-		}
-		/* delete up to here */
 		
 		newList.setSongs(sortedList);
 		return newList;
