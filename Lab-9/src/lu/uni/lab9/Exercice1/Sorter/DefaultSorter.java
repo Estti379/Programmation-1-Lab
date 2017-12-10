@@ -8,7 +8,6 @@ public class DefaultSorter implements PlaylistSorter {
 
 	@Override
 	public List<Song> sort(Playlist toBeSorted) {
-		// TODO Auto-generated method stub
 		return toBeSorted.getSongs();
 	}
 
