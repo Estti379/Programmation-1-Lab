@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="lu.uni.lab9.Exercice2.StarTrek.Items.CargoObject" project="Lab-9" 
     file="/Lab-9/src/lu/uni/lab9/Exercice2/StarTrek/Items/CargoObject.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="315" y="86"/>    
+    <position height="-1" width="-1" x="162" y="86"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <interface id="2" language="java" name="lu.uni.lab9.Exercice2.StarTrek.Items.Consumable" project="Lab-9" 
     file="/Lab-9/src/lu/uni/lab9/Exercice2/StarTrek/Items/Consumable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="644" y="228"/>    
+    <position height="-1" width="-1" x="487" y="224"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </interface>  
   <class id="3" language="java" name="lu.uni.lab9.Exercice2.StarTrek.Items.CrystalContainer" project="Lab-9" 
     file="/Lab-9/src/lu/uni/lab9/Exercice2/StarTrek/Items/CrystalContainer.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="322" y="241"/>    
+    <position height="-1" width="-1" x="165" y="237"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="lu.uni.lab9.Exercice2.StarTrek.Items.Crystal" project="Lab-9" 
     file="/Lab-9/src/lu/uni/lab9/Exercice2/StarTrek/Items/Crystal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="305" y="485"/>    
+    <position height="-1" width="-1" x="148" y="481"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,8 +39,12 @@
   </class>  
   <association id="5">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="6" name="storedCrystal"/>      
-      <multiplicity id="7" minimum="0" maximum="2147483647"/>    
+      <attribute id="6" name="storedCrystal">        
+        <position height="0" width="0" x="-157" y="-4"/>      
+      </attribute>      
+      <multiplicity id="7" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-157" y="-4"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  

@@ -17,11 +17,19 @@ public class Starship extends SpaceStructure implements Repairable{
 		crystalCargo = new CrystalContainer();
 	}
 	
+	public int getEnergy() {
+		return energy;
+	}
+	
+	protected CrystalContainer getCrystalCargo() {
+		return crystalCargo;
+	}
+	
 	public void rechargeEnergy(int energy) {
 		this.energy = this.energy + energy;
 	}
 	
-	private void attackShip(Attackable target, int damage) {
+	protected void attackShip(Attackable target, int damage) {
 		
 		if ( damage > energy ) { 
 			System.out.println( this.getName() + " has not enough energy to "
@@ -45,6 +53,7 @@ public class Starship extends SpaceStructure implements Repairable{
 	@Override
 	public void getHit(int damage) {
 		shield = shield - damage;
+		System.out.println(this.getName() + " was hit for " + damage + "!");
 
 		if ( this.isDestroyed() ) {
 			System.out.println( this.getName() + " was destroyed!" );

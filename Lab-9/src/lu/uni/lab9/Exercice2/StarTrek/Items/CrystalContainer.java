@@ -9,13 +9,19 @@ public class CrystalContainer extends CargoObject implements Consumable{
 	private List<Crystal> storedCrystal;
 	
 	
+	public int getStoredAmmount()  {
+		return storedCrystal.size();
+	}
+	
+	
 	@Override
 	public void consumeItem(SpaceStructure target) {
 		int energyRecharged = 0;
+		/* TODO To use "instance of" or not? */
 		Starship myTarget = (Starship) target;
 		if ( storedCrystal.size() != 0 ) {
 			energyRecharged = storedCrystal.get(0).getEnergy();
-			storedCrystal.remove(0);
+			this.removeItem(1);
 			
 			myTarget.rechargeEnergy(energyRecharged);
 		}
@@ -25,14 +31,19 @@ public class CrystalContainer extends CargoObject implements Consumable{
 	}
 
 	@Override
-	public void addItem() {
-		storedCrystal.add( new Crystal() );
+	public void addItem(int ammount) {
+		for (int i = 0 ; i < ammount ; i++ ) {
+			storedCrystal.add( new Crystal() );
+		}
 		
 	}
 
 	@Override
-	public void removeItem() {
-		storedCrystal.remove(0);
+	public void removeItem(int ammount) {
+		for (int i = 0 ; i < ammount ; i++ ) {
+			storedCrystal.remove(0);
+		}
+		
 		
 	}
 

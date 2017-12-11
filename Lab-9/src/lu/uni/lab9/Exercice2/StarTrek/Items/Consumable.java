@@ -6,7 +6,7 @@ public interface Consumable {
 
 	public void consumeItem(SpaceStructure target);
 	
-	public void addItem();
+	public void addItem(int ammount);
 	
-	public void removeItem();
+	public void removeItem(int ammount);
 }
