@@ -1,54 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <interface id="1" language="java" name="lu.uni.lab9.Exercice2.StarTrek.Attackable" project="Lab-9" 
-    file="/Lab-9/src/lu/uni/lab9/Exercice2/StarTrek/Attackable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="529" y="536"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="2" language="java" name="lu.uni.lab9.Exercice2.StarTrek.SpaceStructure" project="Lab-9" 
-    file="/Lab-9/src/lu/uni/lab9/Exercice2/StarTrek/SpaceStructure.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="285" y="523"/>    
+  <class id="1" language="java" name="lu.uni.lab9.Exercice2.StarTrek.Items.CargoObject" project="Lab-9" 
+    file="/Lab-9/src/lu/uni/lab9/Exercice2/StarTrek/Items/CargoObject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="315" y="86"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="lu.uni.lab9.Exercice2.StarTrek.Starship" project="Lab-9" 
-    file="/Lab-9/src/lu/uni/lab9/Exercice2/StarTrek/Starship.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="97" y="308"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="4" language="java" name="lu.uni.lab9.Exercice2.StarTrek.Repairable" project="Lab-9" 
-    file="/Lab-9/src/lu/uni/lab9/Exercice2/StarTrek/Repairable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="421" y="332"/>    
+  <interface id="2" language="java" name="lu.uni.lab9.Exercice2.StarTrek.Items.Consumable" project="Lab-9" 
+    file="/Lab-9/src/lu/uni/lab9/Exercice2/StarTrek/Items/Consumable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="644" y="228"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <realization id="5">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <generalization id="6">    
+  <class id="3" language="java" name="lu.uni.lab9.Exercice2.StarTrek.Items.CrystalContainer" project="Lab-9" 
+    file="/Lab-9/src/lu/uni/lab9/Exercice2/StarTrek/Items/CrystalContainer.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="322" y="241"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="lu.uni.lab9.Exercice2.StarTrek.Items.Crystal" project="Lab-9" 
+    file="/Lab-9/src/lu/uni/lab9/Exercice2/StarTrek/Items/Crystal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="305" y="485"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="5">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="6" name="storedCrystal"/>      
+      <multiplicity id="7" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="8">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <realization id="7">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="4"/>  
   </realization>  
+  <generalization id="9">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

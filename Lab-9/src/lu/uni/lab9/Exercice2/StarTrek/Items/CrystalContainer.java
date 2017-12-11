@@ -2,6 +2,7 @@ package lu.uni.lab9.Exercice2.StarTrek.Items;
 
 import java.util.List;
 import lu.uni.lab9.Exercice2.StarTrek.SpaceStructure;
+import lu.uni.lab9.Exercice2.StarTrek.Starship;
 
 public class CrystalContainer extends CargoObject implements Consumable{
 	
@@ -9,20 +10,29 @@ public class CrystalContainer extends CargoObject implements Consumable{
 	
 	
 	@Override
-	public int consumeItem(SpaceStructure target) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void addItem() {
-		// TODO Auto-generated method stub
+	public void consumeItem(SpaceStructure target) {
+		int energyRecharged = 0;
+		Starship myTarget = (Starship) target;
+		if ( storedCrystal.size() != 0 ) {
+			energyRecharged = storedCrystal.get(0).getEnergy();
+			storedCrystal.remove(0);
+			
+			myTarget.rechargeEnergy(energyRecharged);
+		}
+		
+		
 		
 	}
 
 	@Override
-	public void removeItem(int index) {
-		// TODO Auto-generated method stub
+	public void addItem() {
+		storedCrystal.add( new Crystal() );
+		
+	}
+
+	@Override
+	public void removeItem() {
+		storedCrystal.remove(0);
 		
 	}
 

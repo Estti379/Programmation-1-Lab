@@ -4,15 +4,15 @@ import java.util.Random;
 
 public class Crystal {
 	
-	private static final int maxEnergy = 500;
-	private static final int minEnergy = 100;
+	private static final int MAX_ENERGY = 500;
+	private static final int MIN_ENERGY = 100;
 	private static Random random = new Random( System.currentTimeMillis() );
 	
 	private final int energy;
 	
 	
 	public Crystal() {
-		energy = random.nextInt( maxEnergy - 1 ) + minEnergy + 1;
+		energy = random.nextInt( MAX_ENERGY - 1 ) + MIN_ENERGY + 1;
 	}
 
 

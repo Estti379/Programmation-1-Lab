@@ -1,17 +1,24 @@
 package lu.uni.lab9.Exercice2.StarTrek;
 
+import lu.uni.lab9.Exercice2.StarTrek.Items.CrystalContainer;
+
 public class Starship extends SpaceStructure implements Repairable{
 	
 	private final int maxShield = 1000;
 	private int shield;
 	private int energy;
-	
+	private CrystalContainer crystalCargo;
 	
 	public Starship(String newName) {
 		super(newName);
 		
 		shield = maxShield;
 		energy = 0;
+		crystalCargo = new CrystalContainer();
+	}
+	
+	public void rechargeEnergy(int energy) {
+		this.energy = this.energy + energy;
 	}
 	
 	private void attackShip(Attackable target, int damage) {
@@ -66,6 +73,6 @@ public class Starship extends SpaceStructure implements Repairable{
 	}
 	
 	public void useCrystal() {
-		
+		crystalCargo.consumeItem(this);
 	}
 }
