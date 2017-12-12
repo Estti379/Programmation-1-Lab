@@ -1,5 +1,6 @@
 package lu.uni.lab9.Exercice2.StarTrek.Items;
 
+import java.util.ArrayList;
 import java.util.List;
 import lu.uni.lab9.Exercice2.StarTrek.SpaceStructure;
 import lu.uni.lab9.Exercice2.StarTrek.Starship;
@@ -8,6 +9,9 @@ public class CrystalContainer extends CargoObject implements Consumable{
 	
 	private List<Crystal> storedCrystal;
 	
+	public CrystalContainer() {
+		storedCrystal = new ArrayList<>();
+	}
 	
 	public int getStoredAmmount()  {
 		return storedCrystal.size();

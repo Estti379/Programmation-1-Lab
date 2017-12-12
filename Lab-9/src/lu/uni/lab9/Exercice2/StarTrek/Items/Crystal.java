@@ -12,7 +12,7 @@ public class Crystal {
 	
 	
 	public Crystal() {
-		energy = random.nextInt( MAX_ENERGY - 1 ) + MIN_ENERGY + 1;
+		energy = random.nextInt( MAX_ENERGY - MIN_ENERGY - 1 ) + MIN_ENERGY + 1;
 	}
 
 

@@ -21,33 +21,54 @@ public class Starship extends SpaceStructure implements Repairable{
 		return energy;
 	}
 	
+	protected void setEnergy(int energy) {
+		this.energy = energy;
+	}
+	
 	protected CrystalContainer getCrystalCargo() {
 		return crystalCargo;
 	}
 	
 	public void rechargeEnergy(int energy) {
 		this.energy = this.energy + energy;
+		
+		System.out.println(this.getName() + " restored " + energy
+				+ " energy and has a total of " + this.energy + " energy!");
 	}
 	
 	protected void attackShip(Attackable target, int damage) {
 		
-		if ( damage > energy ) { 
-			System.out.println( this.getName() + " has not enough energy to "
-					+ "perform it's attack!");
-		} else if  ( !target.isTargetable() ) {
-			/* is empty */
-		} else if (this == target) {
-			System.out.println( this.getName() + " is trying to target himself"
-					+ ". The attack failed!");
+		if ( isDestroyed() ) {
+			System.out.println(this.getName() + " is destroyed. It can't "
+								+ "perform any actions.");
 		} else {
-			target.getHit(damage);
-			energy = energy - damage;
+			/* TODO How to solve this?*/
+	//		System.out.println(this.getName() + " attacks" + target.getName());
+			System.out.println(this.getName() + " launches an attack.");
+			
+			if ( damage > energy ) { 
+				System.out.println( this.getName() + " has not enough energy to "
+						+ "perform it's attack!");
+			} else if  ( !target.isTargetable() ) {
+				/* is empty */
+			} else if (this == target) {
+				System.out.println( this.getName() + " is trying to target himself"
+						+ ". The attack failed!");
+			} else {
+				target.getHit(damage);
+				energy = energy - damage;
+			}
 		}
 		
 	}
 	
 	public void useSimpleLaser(Attackable target) {
-		attackShip(target, 200);
+		if ( isDestroyed() ) {
+			System.out.println(this.getName() + " is destroyed. It can't "
+								+ "perform any actions.");
+		} else {
+			attackShip(target, 200);
+		}
 	}
 
 	@Override
@@ -77,11 +98,21 @@ public class Starship extends SpaceStructure implements Repairable{
 
 	@Override
 	public void restoreShield() {
-		shield = maxShield;
+		if ( isDestroyed() ) {
+			System.out.println(this.getName() + " is destroyed. It can't "
+								+ "be repaired.");
+		} else {
+			shield = maxShield;
+		}
 		
 	}
 	
 	public void useCrystal() {
-		crystalCargo.consumeItem(this);
+		if ( isDestroyed() ) {
+			System.out.println(this.getName() + " is destroyed. It can't "
+								+ "perform any actions.");
+		} else {
+			crystalCargo.consumeItem(this);
+		}
 	}
 }

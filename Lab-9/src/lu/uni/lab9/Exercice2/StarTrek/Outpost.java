@@ -26,12 +26,26 @@ public class Outpost extends SpaceStructure {
 	}
 	
 	public void repairStarship(Starship target) {
-		target.restoreShield();
+		if ( isDestroyed() ) {
+			System.out.println(this.getName() + " is destroyed. It can't "
+								+ "perform any actions.");
+		} else {
+			target.restoreShield();
+		}
 	}
 	
 	public void rearmStarship(Starship target) {
 		
-		target.getCrystalCargo().addItem(100
+		if ( isDestroyed() ) {
+			System.out.println(this.getName() + " is destroyed. It can't "
+								+ "perform any actions.");
+		} else {
+			target.getCrystalCargo().addItem(100
 				- target.getCrystalCargo().getStoredAmmount() );
+		
+			System.out.println(target.getName() + " was rearmed at "
+							+  this.getName() + ".");
+		}
+		
 	}
 }
