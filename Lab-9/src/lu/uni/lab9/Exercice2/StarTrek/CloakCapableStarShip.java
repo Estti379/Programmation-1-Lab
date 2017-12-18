@@ -11,6 +11,22 @@ public abstract class CloakCapableStarShip extends Starship implements Cloakable
 	}
 	
 	@Override
+	public boolean isTargetable() {
+		
+		boolean targetable = true;
+		
+		if ( this.isDestroyed() ) {
+			targetable = false;
+			System.out.println("Can't target a destroyed Structure.");
+		} else if ( getCloakStatus() == CloakStatus.ENABLED ) {
+			targetable = false;
+			System.out.println("Can't target a cloaked structure.");
+		}
+		
+		return targetable;
+	}
+	
+	@Override
 	public CloakStatus getCloakStatus() {
 		/* Avoiding to send the object */
 		return CloakStatus.valueOf( cloaking.toString() );

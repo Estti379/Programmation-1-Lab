@@ -25,15 +25,15 @@ public class Launcher {
 			long time = System.currentTimeMillis();
 			
 			try ( BufferedInputStream inputStream =
-						new BufferedInputStream( new FileInputStream(args[0]) );
+					new BufferedInputStream( new FileInputStream(args[0]) );
 				  BufferedOutputStream outputStreamA =
-						new BufferedOutputStream( new FileOutputStream(fileName[0]
-						+ "_copyA." + fileName[1] ) );
+					new BufferedOutputStream( new FileOutputStream(fileName[0]
+					+ "_copyA." + fileName[1] ) );
 				  BufferedOutputStream outputStreamB =
-						new BufferedOutputStream( new FileOutputStream(fileName[0]
-						+ "_copyB." + fileName[1] ) );
-					MultipleOutputStream masterOutput =
-						new MultipleOutputStream(outputStreamA) ) {
+					new BufferedOutputStream( new FileOutputStream(fileName[0]
+					+ "_copyB." + fileName[1] ) );
+				  MultipleOutputStream masterOutput =
+					new MultipleOutputStream(outputStreamA) ) {
 				
 				masterOutput.addNewOutputStream(outputStreamB);
 				
